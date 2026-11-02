@@ -1,0 +1,53 @@
+name: lab3_appointment
+description: "Lab 3 PAM - aplicația Appointment (varianta 2) cu State Management (Cubit) și date încărcate asincron din JSON."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  # Iconițele sunt exportate din Figma ca SVG.
+  flutter_svg: ^2.0.10
+  # State management: BLoC / Cubit.
+  flutter_bloc: ^9.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Datele aplicației (fișierul JSON primit pentru varianta 2).
+    - assets/data/
+    # Imaginile (export 3x) și iconițele (SVG) din Figma.
+    - assets/images/
+    - assets/icons/
+
+  # Fonturile din design: Outfit (Homescreen) și Open Sans (Appointment).
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/Outfit-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Outfit-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Outfit-SemiBold.ttf
+          weight: 600
